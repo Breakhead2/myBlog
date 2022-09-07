@@ -2,6 +2,7 @@
 
 namespace myblog\models;
 
+use myblog\engine\Db;
 use myblog\models\Models;
 
 class Posts extends Models
