@@ -1,10 +1,11 @@
 <?php
 
 use myblog\engine\{Autoload, Db};
-use myblog\models\Posts;
+use myblog\models\{Posts, Users};
 
 include "./engine/Autoload.php";
 
-spl_autoload_register([new Autoload(), "loadClasses"]);
+spl_autoload_register([new Autoload("myblog"), "loadClasses"]);
 
-$post = new Posts(new Db());
+$post = new Posts();
+$user = new Users();
