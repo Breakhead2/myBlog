@@ -19,6 +19,6 @@ abstract class Models
 
     public function __get($name)
     {
-        return $this->$name;
+        if(isset($this->props[$name])) return $this->$name;
     }
 }
