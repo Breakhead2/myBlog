@@ -4,9 +4,13 @@ namespace myblog\models\traits;
 
 trait TSingleton
 {
-    private static object $instance;
+    private static $instance = null;
 
-    public static function getInstance (): object
+    private function __construct() {}
+    private function __clone() {}
+    private function __wakeup() {}
+
+    public static function getInstance ()
     {
         if(is_null(static::$instance)){
             static::$instance = new static();

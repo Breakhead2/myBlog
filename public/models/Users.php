@@ -4,7 +4,7 @@ namespace myblog\models;
 
 class Users extends Models
 {
-    public int $id;
+    public $id;
     public $login;
     public $pass;
     public $email;

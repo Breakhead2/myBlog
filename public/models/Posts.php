@@ -7,7 +7,7 @@ use myblog\models\Models;
 
 class Posts extends Models
 {
-    public int $id;
+    public $id;
     public $title;
     public $author;
     public $text;

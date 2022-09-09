@@ -4,7 +4,7 @@ namespace myblog\models;
 
 class Comments extends Models
 {
-    public int $id;
+    public $id;
     public $post_id;
     public $name;
     public $text;

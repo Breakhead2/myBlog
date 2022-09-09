@@ -2,29 +2,52 @@
 
 namespace myblog\engine;
 
+use myblog\config\Config;
 use myblog\models\traits\TSingleton;
+use PDO;
 
 class Db
 {
-    private static ?object $connection = null;
-
-    private function __construct() {}
-    private function __clone() {}
-    private function __wakeup() {}
+    private ?object $DBH = null;
 
     use TSingleton;
 
-    //TODO реализовать подключение к базе данных через PDO. Подключаться надо 1 раз!
+    private function getConnection(): object {
+        $config = new Config();
 
-    public function queryOne($sql) {
-        echo $sql;
+        if(is_null($this->DBH)){
+            try {
+                $this->DBH = new PDO("mysql:host=$config->host;dbname=$config->dbname", $config->user, $config->pass);
+                $this->DBH->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+            }catch (\PDOException $e){
+                echo "PDO error!";
+                file_put_contents("./log/PDOErrors.txt", $e->getMessage(), FILE_APPEND);
+            }
+        }
+        return $this->DBH;
     }
 
-    public function queryAll($sql) {
-        echo $sql;
+    private function query($sql, $params) {
+        $STH = $this->getConnection()->prepare($sql);
+        $STH->execute($params);
+        return $STH;
     }
 
-    public function execute($sql) {
-        echo $sql;
+    public function queryOne($sql, $params, $class) {
+        $STH = $this->query($sql, $params);
+        $STH->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, $class);
+        return $STH->fetch();
+    }
+
+    public function queryAll($sql, $params = []) {
+        return $this->query($sql, $params)->fetchAll();
+    }
+
+    public function execute($sql, $params = []) {
+        return $this->query($sql, $params)->rowCount();
+    }
+
+    public function getLastInsertId(){
+        return $this->getConnection()->lastInsertId();
     }
 }
