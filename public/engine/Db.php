@@ -28,6 +28,8 @@ class Db
     }
 
     private function query($sql, $params) {
+        var_dump($sql);
+        var_dump($params);
         $STH = $this->getConnection()->prepare($sql);
         $STH->execute($params);
         return $STH;
@@ -39,8 +41,10 @@ class Db
         return $STH->fetch();
     }
 
-    public function queryAll($sql, $params = []) {
-        return $this->query($sql, $params)->fetchAll();
+    public function queryAll($sql, $class, $params = []) {
+        $STH = $this->query($sql, $params);
+        $STH->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, $class);
+        return $STH->fetchAll();
     }
 
     public function execute($sql, $params = []) {

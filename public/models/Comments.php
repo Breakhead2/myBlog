@@ -2,12 +2,18 @@
 
 namespace myblog\models;
 
-class Comments extends Models
+class Comments extends DBModels
 {
-    public $id;
-    public $post_id;
-    public $name;
-    public $text;
+    protected $id;
+    protected $post_id;
+    protected $name;
+    protected $text;
+
+    protected array $props = [
+        "post_id" => false,
+        "name" => false,
+        "text" => false
+    ];
 
     public function __construct($post_id = null, $name = null, $text = null)
     {
@@ -16,7 +22,7 @@ class Comments extends Models
         $this->text = $text;
     }
 
-    public function getTableName():string
+    public static function getTableName():string
     {
         return "comments";
     }

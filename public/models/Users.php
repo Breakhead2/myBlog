@@ -2,14 +2,22 @@
 
 namespace myblog\models;
 
-class Users extends Models
+class Users extends DBModels
 {
-    public $id;
-    public $login;
-    public $pass;
-    public $email;
-    public $name;
-    public $lastname;
+    protected $id;
+    protected $login;
+    protected $pass;
+    protected $email;
+    protected $name;
+    protected $lastname;
+
+    protected array $props = [
+      "login" => false,
+      "pass" => false,
+      "email" => false,
+      "name" => false,
+      "lastname" => false
+    ];
 
     public function __construct($login = null, $pass = null, $email = null, $name = null, $lastname = null)
     {
@@ -20,7 +28,7 @@ class Users extends Models
         $this->lastname = $lastname;
     }
 
-    public function getTableName():string
+    public static function getTableName():string
     {
         return "users";
     }

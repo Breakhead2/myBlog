@@ -2,16 +2,20 @@
 
 namespace myblog\models;
 
-use myblog\engine\Db;
-use myblog\models\Models;
-
-class Posts extends Models
+class Posts extends DBModels
 {
-    public $id;
-    public $title;
-    public $author;
-    public $text;
-    public $data;
+    protected $id;
+    protected $title;
+    protected $author;
+    protected $text;
+    protected $data;
+
+    protected array $props = [
+        "title" => false,
+        "author" => false,
+        "text" => false,
+        "data" => false
+    ];
 
     public function __construct($title = null, $author = null, $text = null, $data = null)
     {
@@ -21,7 +25,7 @@ class Posts extends Models
         $this->data = $data;
     }
 
-    public function getTableName():string
+    public static function getTableName():string
     {
         return "posts";
     }
