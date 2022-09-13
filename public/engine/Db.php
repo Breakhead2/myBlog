@@ -2,7 +2,7 @@
 
 namespace myblog\engine;
 
-use myblog\config\Config;
+use myblog\config\ConfigDB;
 use myblog\models\traits\TSingleton;
 use PDO;
 
@@ -13,7 +13,7 @@ class Db
     use TSingleton;
 
     private function getConnection(): object {
-        $config = new Config();
+        $config = new ConfigDB();
 
         if(is_null($this->DBH)){
             try {

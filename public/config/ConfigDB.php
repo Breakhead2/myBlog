@@ -2,7 +2,7 @@
 
 namespace myblog\config;
 
-class Config
+class ConfigDB
 {
     public string $host;
     public string $dbname;
