@@ -2,9 +2,10 @@
 
 namespace myblog\controllers;
 
-class Controller
-
+abstract class Controller
 {
+    abstract public function runAction($action);
+
     public function render($template, $params = []){
         return $this->renderTemplate('layout\main', [
             'title' => $params['title'],

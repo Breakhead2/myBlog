@@ -10,7 +10,13 @@ class HomeControllers extends Controller
     public function runAction($action) {
         $this->action = $action ?: $this->defaultAction;
         $method = $this->action . "Action";
-        $this->$method();
+        if(method_exists($this, $method)){
+            $this->$method();
+        }else{
+            echo "Ошибка 404. Данного метода не существует";
+            die();
+        }
+
     }
 
     public function IndexAction() {
