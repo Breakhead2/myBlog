@@ -8,10 +8,11 @@
 </head>
 <body>
 <div class="wrapper">
-    <?=$header?>
-    <div class="main">
+    <div class="wall">
+        <?=$header?>
         <?=$content?>
     </div>
+    <?=$gallery?>
     <?=$footer?>
 </div>
 </body>

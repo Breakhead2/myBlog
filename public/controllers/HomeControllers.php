@@ -20,7 +20,9 @@ class HomeControllers extends Controller
     }
 
     public function IndexAction() {
-        echo $this->render('home');
+        echo $this->render('home', [
+            'title' => "Домашняя страница"
+        ]);
     }
 
 }
