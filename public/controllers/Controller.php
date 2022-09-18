@@ -13,6 +13,10 @@ abstract class Controller
                 'menu' => $this->renderTemplate('layout\menu')
             ]),
             'content' => $this->renderTemplate($template, $params),
+            'recommendation' => $this->renderTemplate('components/recommendation', [
+                'heading' => 'Featured Stories',
+                'description' => 'Did you read our personal favorites?'
+            ]),
             'footer' => $this->renderTemplate('layout\footer')
         ]);
 
