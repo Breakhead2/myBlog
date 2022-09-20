@@ -1,5 +1,5 @@
 @import "_null.css";
-
+@import "_header.css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
@@ -25,45 +25,6 @@
     margin: 0 auto;
     max-width: 940px;
 }
-
-/*section header start */
-
-.header{
-    margin: 60px 0;
-}
-.header .container .logo{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 52px;
-}
-.header .container nav .menu{
-    display: flex;
-    justify-content: center;
-}
-.header .container nav .menu .menu__list{
-    margin-right: 24px;
-    padding-bottom: 16px;
-}
-.header .container nav .menu .menu__list:hover{
-    padding-bottom: 14px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-}
-.header .container nav .menu .menu__list.active{
-    padding-bottom: 14px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-}
-.header .container nav .menu .menu__list .menu__list__link{
-    color: #ffffff;
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 11px;
-    letter-spacing: 1px;
-    font-family: var(--lato);
-}
-.header .container nav .menu .menu__list:last-of-type{
-    margin-right: 0;
-}
-/*section header end */
 
 /* section articles start */
 .articles .container{
