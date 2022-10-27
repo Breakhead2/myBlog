@@ -8,7 +8,7 @@ include "./config/config.php";
 spl_autoload_register([new Autoload("myblog"), "loadClasses"]);
 
 $controller = $_GET['c'] ?: 'home';
-$action = $_GET['a'];
+$action = $_GET['a'] ?: 'index';
 
 $controllerName = CLASS_NAMESPACE . ucfirst($controller) . "Controllers";
 

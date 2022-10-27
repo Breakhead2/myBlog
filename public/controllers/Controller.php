@@ -5,6 +5,7 @@ namespace myblog\controllers;
 abstract class Controller
 {
     abstract public function runAction($action);
+    abstract public function indexAction();
 
     public function render($template, $params = []){
         return $this->renderTemplate('layout\main', [

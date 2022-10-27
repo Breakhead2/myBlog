@@ -2,12 +2,13 @@
 
 namespace myblog\controllers;
 
-class HomeControllers extends Controller
+class LoginControllers extends Controller
 {
     private string $action;
     private string $defaultAction = 'index';
 
-    public function runAction($action) {
+    public function runAction($action)
+    {
         $this->action = $action ?: $this->defaultAction;
         $method = $this->action . "Action";
         if(method_exists($this, $method)){
@@ -16,14 +17,12 @@ class HomeControllers extends Controller
             echo "Ошибка 404. Данного метода не существует";
             die();
         }
-
     }
 
-    public function indexAction() {
-        echo $this->render('home', [
-            'title' => "Домашняя страница",
-            'want_more' => $this->renderTemplate('components/want_more')
+    public function indexAction()
+    {
+        echo $this->render('login', [
+            'title' => 'Вход'
         ]);
     }
-
 }

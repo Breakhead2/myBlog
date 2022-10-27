@@ -37,6 +37,7 @@
 }
 .header .container nav .menu .menu__list{
     /*margin-right: 24px;*/
+    cursor: pointer;
     padding-bottom: 16px;
 }
 .header .container nav .menu .menu__list:hover{
