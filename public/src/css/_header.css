@@ -70,6 +70,9 @@
         display: block;
         margin-right: 30px;
     }
+    .header .container{
+        width: 100%;
+    }
     .header .container nav{
         position: relative;
         justify-content: right;
@@ -80,7 +83,7 @@
         top: 50px;
         left: 0;
         flex-direction: column;
-        justify-content: center;
+        align-items: baseline;
         background-color: #F1F1F1;
         z-index: 1000;
     }
@@ -105,5 +108,14 @@
         color: #333333;
     }
 }
-
+@media (max-width: 425px){
+    .header .container nav .burger__menu {
+        display: block;
+        margin-right: 15px;
+    }
+    .header .container nav .menu{
+        left: -12px;
+        width: 100vw;
+    }
+}
 /*section header end */
