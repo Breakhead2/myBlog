@@ -1,0 +1,96 @@
+/* section recommendation start */
+.recommendation {
+    background-color: #ffffff;
+    padding: 85px 0;
+}
+.recommendation .container .heading{
+    font-family: var(--monserat);
+    color: var(--main_color);
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.recommendation .container .description{
+    font-family: var(--lato);
+    font-size: 23px;
+    line-height: 33px;
+    color: #A9AFB3;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.recommendation .container .recommendation_box{
+    display: grid;
+    grid-template: auto / repeat(auto-fill, minmax(290px, 1fr));
+    column-gap: 20px;
+}
+.recommendation .container .recommendation_box .recommend{
+    max-width: 300px;
+}
+.recommendation .container .recommendation_box .recommend .top{
+    position: relative;
+}
+.recommendation .container .recommendation_box .recommend .top .image__container{
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.recommendation .container .recommendation_box .recommend .top .image__container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.recommendation .container .recommendation_box .recommend .top .author{
+    display: flex;
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    color: #ffffff;
+    font-family: var(--monserat);
+}
+.recommendation .container .recommendation_box .recommend .top .author .avatar{
+    margin-right: 14px;
+    width: 35px;
+    height: 35px;
+}
+.recommendation .container .recommendation_box .recommend .top .author .avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.recommendation .container .recommendation_box .recommend .top .author .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 19px;
+}
+.recommendation .container .recommendation_box .recommend .top .author .info .name{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.recommendation .container .recommendation_box .recommend .top .author .info .data{
+    font-family: var(--lato);
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.recommendation .container .recommendation_box .recommend .bottom .heading{
+    margin-top: 23px;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: var(--monserat);
+    text-align: left;
+    color: #000000;
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+    .recommendation .container .recommendation_box{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        column-gap: 20px;
+    }
+}
+/* section recommendation end */

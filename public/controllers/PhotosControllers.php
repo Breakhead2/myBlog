@@ -22,7 +22,8 @@ class PhotosControllers extends Controller
     public function indexAction()
     {
         echo $this->render('photos', [
-            'title' => 'Фотографии'
+            'title' => 'Фотографии',
+            'styles' => ['gallery']
         ]);
     }
 }

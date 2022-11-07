@@ -22,7 +22,8 @@ class LoginControllers extends Controller
     public function indexAction()
     {
         echo $this->render('login', [
-            'title' => 'Вход'
+            'title' => 'Вход',
+            'styles' => ['login']
         ]);
     }
 }

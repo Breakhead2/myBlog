@@ -4,7 +4,7 @@
             <div class="article">
                 <div class="top">
                     <div class="image__container">
-                        <img src="./src/images/art_img_1.png" alt="">
+                        <img src="./src/images/articals_images/art_img_1.png" alt="">
                     </div>
                     <p class="category">
                         category
@@ -34,7 +34,7 @@
             <div class="article">
                 <div class="top">
                     <div class="image__container">
-                        <img src="./src/images/art_img_2.png" alt="">
+                        <img src="./src/images/articals_images/art_img_2.png" alt="">
                     </div>
                     <p class="category">
                         category
@@ -64,7 +64,7 @@
             <div class="article">
                 <div class="top">
                     <div class="image__container">
-                        <img src="./src/images/art_img_3.png" alt="">
+                        <img src="./src/images/articals_images/art_img_3.png" alt="">
                     </div>
                     <p class="category">
                         category

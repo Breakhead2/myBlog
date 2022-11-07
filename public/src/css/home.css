@@ -1,0 +1,136 @@
+/* section articles start */
+.articles .container{
+    display: flex;
+    justify-content: center;
+}
+
+.articles__box{
+    max-width: 800px;
+}
+.article .top{
+    font-family: var(--monserat);
+    color: #ffffff;
+    position: relative;
+    box-shadow: 0 5px 4px 0 rgb(0 0 0 / 0.2);
+}
+.article .top .image__container{
+    width: 100%;
+    height: 100%;
+}
+.article .top .image__container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.article .top .category{
+    position: absolute;
+    font-size: 10px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 30px;
+    top: 20px;
+    right: 20px;
+}
+.article .top .title{
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    max-width: 490px;
+}
+.article .top .title .author{
+    display: flex;
+}
+.article .top .title .author .avatar{
+    margin-right: 14px;
+    width: 40px;
+    height: 40px;
+}
+.article .top .title .author .avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.article .top .title .author .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 12px;
+}
+.article .top .title .author .info .name{
+    font-size: 18px;
+}
+.article .top .title .author .info .data{
+    font-family: var(--lato);
+    font-size: 13px;
+}
+.article .top .title .heading{
+    margin-top: 20px;
+    font-size: 28px;
+    line-height: 35px;
+}
+.article .bottom{
+    font-family: var(--lato);
+    padding: 35px 30px;
+    background-color: #ffffff;
+}
+.article .bottom .description{
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--main_color);
+}
+.article .bottom .read_more{
+    margin-top: 5px;
+    font-size: 17px;
+    color: var(--btn_color);
+    line-height: 30px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.article .bottom .read_more i{
+    margin-left: 6px;
+}
+/* media queries */
+
+@media (max-width: 767px) {
+    .article .top .title .heading{
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+/* section articles end */
+
+@media (max-width: 425px) {
+    .article .top{
+        height: 170px;
+    }
+    .article .top .title .heading{
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+}
+@media (max-width: 375px) {
+    .article .top .title {
+        left:12px;
+        bottom: 10px;
+    }
+    .article .top .category{
+        top: 12px;
+        right: 12px;
+    }
+    .article .top .title .author .avatar{
+        display: none;
+    }
+    .article .top .title .author .info .data {
+        display: none;
+    }
+}
+
+@media (max-width: 375px){
+    .article .top .title .heading{
+        font-size: 18px;
+    }
+}

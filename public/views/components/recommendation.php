@@ -10,7 +10,7 @@
             <div class="recommend">
                 <div class="top">
                     <div class="image__container">
-                        <img src="./src/images/art_img_1.png" alt="">
+                        <img src="./src/images/articals_images/art_img_1.png" alt="">
                     </div>
                     <div class="author">
                         <div class="avatar">
@@ -31,7 +31,7 @@
             <div class="recommend">
                 <div class="top">
                     <div class="image__container">
-                        <img src="./src/images/art_img_2.png" alt="">
+                        <img src="./src/images/articals_images/art_img_2.png" alt="">
                     </div>
                     <div class="author">
                         <div class="avatar">
@@ -52,7 +52,7 @@
             <div class="recommend">
                 <div class="top">
                     <div class="image__container">
-                        <img src="./src/images/art_img_3.png" alt="">
+                        <img src="./src/images/articals_images/art_img_3.png" alt="">
                     </div>
                     <div class="author">
                         <div class="avatar">

@@ -21,7 +21,8 @@ class HomeControllers extends Controller
 
     public function indexAction() {
         echo $this->render('home', [
-            'title' => "Домашняя страница",
+            'title' => 'Домашняя страница',
+            'styles' => ['home', 'want_more'],
             'want_more' => $this->renderTemplate('components/want_more')
         ]);
     }

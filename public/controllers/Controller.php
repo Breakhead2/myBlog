@@ -10,13 +10,14 @@ abstract class Controller
     public function render($template, $params = []){
         return $this->renderTemplate('layout\main', [
             'title' => $params['title'],
+            'styles' => $params['styles'],
             'header' => $this->renderTemplate('layout\header', [
                 'menu' => $this->renderTemplate('layout\menu')
             ]),
             'content' => $this->renderTemplate($template, $params),
             'recommendation' => $this->renderTemplate('components/recommendation', [
-                'heading' => 'Featured Stories',
-                'description' => 'Did you read our personal favorites?'
+                'heading' => "Featured Stories",
+                'description' => "Did you read our personal favorites?"
             ]),
             'footer' => $this->renderTemplate('layout\footer')
         ]);
